@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:itet_app/views/screens/history_page.dart';
 
 import '../../constants.dart';
 import '../../models/dashboard_item.dart';
@@ -73,11 +74,16 @@ class MainDashboard extends StatelessWidget {
             children: items.map((item) {
               return Column(
                 children: [
-                  CircleAvatar(
-                    radius: 35,
-                    backgroundColor: Color(item.color),
-                    child: InkWell(
-                      onTap: () {},
+                  InkWell(
+                    onTap: () {
+                      if (item.title == 'ITET History') {
+                        Navigator.of(context)
+                            .pushNamed(HistoryScreen.routeName);
+                      }
+                    },
+                    child: CircleAvatar(
+                      radius: 35,
+                      backgroundColor: Color(item.color),
                       child: SvgPicture.asset(
                         item.image,
                         // width: 27,

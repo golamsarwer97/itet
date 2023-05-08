@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:itet_app/views/screens/contact_page.dart';
 import 'package:itet_app/views/screens/history_page.dart';
 import 'package:itet_app/views/screens/main_page.dart';
 
@@ -15,7 +16,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: mobileBackGroundColor,
       ),
       // home: SplashScreen(),
-      home: HistoryScreen(),
+      home: ContactScreen(),
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
         MainScreen.routeName: (context) => MainScreen(),
