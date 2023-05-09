@@ -36,7 +36,7 @@ class CustomTextField extends StatelessWidget {
       initialValue: initialValue,
       cursorColor: textFieldColor,
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.only(left: 4),
+        contentPadding: const EdgeInsets.only(left: 0),
         label: Text(labelText),
         labelStyle: TextStyle(
           color: textFieldColor,

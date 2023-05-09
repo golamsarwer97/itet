@@ -7,6 +7,7 @@ import 'package:itet_app/views/screens/history_page.dart';
 
 import '../../constants.dart';
 import '../../models/dashboard_item.dart';
+import '../screens/contact_page.dart';
 
 class MainDashboard extends StatelessWidget {
   MainDashboard({Key? key}) : super(key: key);
@@ -80,14 +81,20 @@ class MainDashboard extends StatelessWidget {
                         Navigator.of(context)
                             .pushNamed(HistoryScreen.routeName);
                       }
+                      if (item.title == 'Contact ITET') {
+                        Navigator.of(context)
+                            .pushNamed(ContactScreen.routeName);
+                      }
                     },
                     child: CircleAvatar(
                       radius: 35,
                       backgroundColor: Color(item.color),
-                      child: SvgPicture.asset(
-                        item.image,
-                        // width: 27,
-                        // height: 27,
+                      child: Center(
+                        child: SvgPicture.asset(
+                          item.image,
+                          width: 30,
+                          height: 30,
+                        ),
                       ),
                     ),
                   ),

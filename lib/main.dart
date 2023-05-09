@@ -24,13 +24,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: mobileBackGroundColor,
       ),
-      // home: SplashScreen(),
-      home: ContactScreen(),
+      home: SplashScreen(),
+      // home: ContactScreen(),
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
         MainScreen.routeName: (context) => MainScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),
         HistoryScreen.routeName: (context) => HistoryScreen(),
+        ContactScreen.routeName: (context) => ContactScreen(),
       },
     );
   }
